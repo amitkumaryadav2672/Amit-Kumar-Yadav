@@ -62,7 +62,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      await axios.post("http://localhost:5000/send-email", {
+      await axios.post("https://amit-kumar-yadav-jlff.onrender.com/send-email", {
         name: formState.name,
         email: formState.email,
         message: formState.message
