@@ -142,7 +142,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1.25rem 3%; /* Reduced horizontal padding for better mobile edge alignment */
+    padding: 1rem 12px; /* Minimum horizontal padding for edge alignment */
   }
 
   .nav-desktop {
@@ -151,10 +151,14 @@
 
   .mobile-toggle {
     display: block;
-    margin-right: -4px; /* Slight nudge to the right for absolute perfection */
+    margin-right: -2px; /* Aligning naturally with the screen edge */
   }
 
   .nav-right-section {
-    gap: 1.2rem !important; /* Slightly tighter gap on mobile */
+    gap: 0.8rem !important; /* Compact group for a sharper look */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Slightly smaller logo for more space on the right */
   }
 }
