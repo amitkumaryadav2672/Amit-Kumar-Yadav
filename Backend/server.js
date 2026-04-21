@@ -4,11 +4,15 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://amit-kumar-yadav.vercel.app", "http://localhost:5173"],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Backend is running successfully 🚀");
+  res.send("Backend is running successfully 🚀 - CORS enabled for Vercel portfolio.");
 });
 
 app.post("/send-email", async (req, res) => {
