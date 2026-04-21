@@ -53,4 +53,16 @@ app.post("/send-email", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server Running on port ${PORT}`);
+  
+  // Self-ping to keep the server awake (Render Free Tier)
+  setInterval(() => {
+    const https = require("https");
+    https.get("https://amit-kumar-yadav-jlff.onrender.com/", (res) => {
+      console.log("Self-ping successful: Server is awake!");
+    }).on("error", (e) => {
+      console.error("Self-ping failed:", e.message);
+    });
+  }, 840000); // 14 minutes
+});

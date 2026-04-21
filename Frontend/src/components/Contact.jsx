@@ -60,6 +60,12 @@ const Contact = () => {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setErrors(prev => ({ ...prev, submit: '' }));
+
+    // Show "Waking up" message only if it takes more than 4 seconds
+    const wakingUpTimeout = setTimeout(() => {
+      setErrors(prev => ({ ...prev, submit: "Server is waking up. Please wait a moment..." }));
+    }, 4000);
 
     try {
       await axios.post("https://amit-kumar-yadav-jlff.onrender.com/send-email", {
@@ -68,17 +74,17 @@ const Contact = () => {
         message: formState.message
       });
 
+      clearTimeout(wakingUpTimeout);
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormState({ name: '', email: '', message: '' });
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
+      clearTimeout(wakingUpTimeout);
       console.error("Failed to send email.", error);
       setIsSubmitting(false);
-      // More helpful message for Render free tier sleep
-      const errorMsg = "Server is waking up. Please wait 30 seconds and try again.";
-      setErrors(prev => ({ ...prev, submit: errorMsg }));
-      setTimeout(() => setErrors(prev => ({ ...prev, submit: "" })), 10000);
+      setErrors(prev => ({ ...prev, submit: "Failed to send message. Please try again." }));
+      setTimeout(() => setErrors(prev => ({ ...prev, submit: "" })), 6000);
     }
   };
 
