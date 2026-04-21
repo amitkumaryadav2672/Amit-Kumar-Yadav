@@ -39,6 +39,25 @@ const Navbar = () => {
     { name: 'Contact', path: '#contact' },
   ];
 
+  const scrollToSection = (e, path) => {
+    e.preventDefault();
+    const id = path.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header className={`navbar flex-between ${scrolled ? 'nav-scrolled glass-panel' : ''}`}>
       <motion.div
@@ -46,7 +65,7 @@ const Navbar = () => {
         animate={{ opacity: 1, x: 0 }}
         className="logo gradient-text"
       >
-        <a href="#home" style={{ color: 'inherit', textDecoration: 'none' }}>AMIT KUMAR YADAV</a>
+        <a href="#home" onClick={(e) => scrollToSection(e, '#home')} style={{ color: 'inherit', textDecoration: 'none' }}>AMIT KUMAR YADAV</a>
       </motion.div>
 
       <nav className="nav-desktop">
@@ -58,7 +77,7 @@ const Navbar = () => {
         >
           {navLinks.map((link, i) => (
             <motion.li key={i} whileHover={{ y: -2 }}>
-              <a href={link.path}>
+              <a href={link.path} onClick={(e) => scrollToSection(e, link.path)}>
                 {link.name}
               </a>
             </motion.li>
@@ -79,9 +98,9 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             className="mobile-menu glass-panel"
           >
             <ul className="mobile-nav-links">
@@ -89,7 +108,7 @@ const Navbar = () => {
                 <li key={i}>
                   <a
                     href={link.path}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => scrollToSection(e, link.path)}
                   >
                     {link.name}
                   </a>
