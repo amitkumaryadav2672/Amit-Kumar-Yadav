@@ -141,11 +141,20 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1.25rem 3%; /* Reduced horizontal padding for better mobile edge alignment */
+  }
+
   .nav-desktop {
     display: none;
   }
 
   .mobile-toggle {
     display: block;
+    margin-right: -4px; /* Slight nudge to the right for absolute perfection */
+  }
+
+  .nav-right-section {
+    gap: 1.2rem !important; /* Slightly tighter gap on mobile */
   }
 }
