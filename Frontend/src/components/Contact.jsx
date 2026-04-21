@@ -73,9 +73,10 @@ const Contact = () => {
       setFormState({ name: '', email: '', message: '' });
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
-      console.error("Failed to send email. Ensure backend is running.", error);
+      console.error("Failed to send email.", error);
       setIsSubmitting(false);
-      alert("Oops! Failed to send message. Please ensure the backend server is running.");
+      setErrors(prev => ({ ...prev, submit: "Oops! Failed to send message. Please check your connection or try again later." }));
+      setTimeout(() => setErrors(prev => ({ ...prev, submit: "" })), 6000);
     }
   };
 
@@ -86,6 +87,11 @@ const Contact = () => {
       ...formState,
       [name]: value
     });
+
+    // Clear submission error when user starts typing again
+    if (errors.submit) {
+      setErrors(prev => ({ ...prev, submit: '' }));
+    }
 
     if (value.includes('  ')) {
       setErrors(prev => ({ ...prev, [name]: 'Only single spaces are allowed.' }));
@@ -277,6 +283,17 @@ const Contact = () => {
               ></textarea>
               {errors.message && <span className="error-text">{errors.message}</span>}
             </div>
+
+            {errors.submit && (
+              <motion.div 
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="error-text" 
+                style={{ textAlign: 'center', marginBottom: '1rem', padding: '0.8rem', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '8px' }}
+              >
+                {errors.submit}
+              </motion.div>
+            )}
 
             <motion.button
               whileHover={{ scale: 1.02 }}
