@@ -4,15 +4,11 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
-app.use(cors({
-  origin: ["https://amit-kumar-yadav.vercel.app", "http://localhost:5173"],
-  methods: ["GET", "POST"],
-  credentials: true
-}));
+app.use(cors({ origin: "*" })); // Allow all origins for the final test
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Backend is running successfully 🚀 - CORS enabled for Vercel portfolio.");
+  res.send("Backend is running successfully 🚀 - All Origins Allowed.");
 });
 
 app.post("/send-email", async (req, res) => {
@@ -20,24 +16,27 @@ app.post("/send-email", async (req, res) => {
 
   try {
     let transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // Use SSL
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: process.env.EMAIL_PASS.replace(/\s+/g, ""), // Auto-remove spaces just in case
       },
     });
 
     // Email to You (Owner)
     let mailOptionsOwner = {
-      from: email,
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // Use your own email as from to avoid spam filters
       to: process.env.EMAIL_USER,
+      replyTo: email, // So you can reply directly to the visitor
       subject: `Portfolio Contact from ${name}`,
       text: `You have a new message from your portfolio:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
 
     // Auto-reply to Visitor
     let mailOptionsVisitor = {
-      from: process.env.EMAIL_USER,
+      from: `"Amit Kumar Yadav" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: `Thank you for contacting Amit Kumar Yadav`,
       text: `Hi ${name},\n\nThank you for reaching out! I have received your message and will get back to you as soon as possible.\n\nBest regards,\nAmit Kumar Yadav`,
@@ -49,7 +48,7 @@ app.post("/send-email", async (req, res) => {
     res.status(200).json({ success: true, message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error);
-    res.status(500).json({ success: false, message: "Failed to send email" });
+    res.status(500).json({ success: false, message: error.message });
   }
 });
 
