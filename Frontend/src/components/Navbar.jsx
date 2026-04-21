@@ -71,6 +71,7 @@ const Navbar = () => {
           {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <div className="mobile-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <span className="menu-text">{mobileMenuOpen ? 'CLOSE' : 'MENU'}</span>
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </div>
       </div>

@@ -150,8 +150,17 @@
   }
 
   .mobile-toggle {
-    display: block;
-    margin-right: 0; /* Resetting negative margin for safety */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .menu-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-main);
   }
 
   .nav-right-section {
