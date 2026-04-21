@@ -39,7 +39,7 @@ app.post("/send-email", async (req, res) => {
       from: `"Amit Kumar Yadav" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: `Thank you for contacting Amit Kumar Yadav`,
-      text: `Hi ${name},\n\nThank you for reaching out! I have received your message and will get back to you as soon as possible.\n\nBest regards,\nAmit Kumar Yadav`,
+      text: `Hi ${name},\n\nThank you for reaching out! I have received your message and will get back to you as soon as possible.\n\nBest regards,\nAmit Kumar Yadav\n+91-6287534350`,
     };
 
     await transporter.sendMail(mailOptionsOwner);
