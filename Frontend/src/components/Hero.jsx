@@ -125,7 +125,7 @@ const Hero = () => {
           <a href="#projects" className="btn btn-secondary">
             View Projects
           </a>
-          <a href="/Amit Yadav.pdf" download="Amit_Yadav_Resume.pdf" className="btn btn-outline">
+          <a href="/Amit Kumar Yadav.pdf" download="Amit_Kumar_Yadav_Resume.pdf" className="btn btn-outline">
             Resume <Download size={18} />
           </a>
         </motion.div>
