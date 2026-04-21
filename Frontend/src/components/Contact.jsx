@@ -182,7 +182,7 @@ const Contact = () => {
 
           <div className="info-items">
             <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=yadavamit847412@gmail.com&su=Let's discuss an opportunity" 
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=yadavamit847412@gmail.com&su=Let's discuss an opportunity&body=Let's discuss an opportunity" 
               target="_blank" 
               rel="noreferrer"
               title="Click to send an email" 

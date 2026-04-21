@@ -139,7 +139,7 @@ const Hero = () => {
         >
           <a href="https://www.linkedin.com/in/amit-kumar-yadav-52a56529a/" target="_blank" rel="noreferrer" className="social-icon-link"><Linkedin size={22} /></a>
           <a href="https://github.com/amitkumaryadav2672" target="_blank" rel="noreferrer" className="social-icon-link"><Github size={22} /></a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yadavamit847412@gmail.com&su=Let's discuss an opportunity" target="_blank" rel="noreferrer" className="social-icon-link" aria-label="Send Email"><Mail size={22} /></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yadavamit847412@gmail.com&su=Let's discuss an opportunity&body=Let's discuss an opportunity" target="_blank" rel="noreferrer" className="social-icon-link" aria-label="Send Email"><Mail size={22} /></a>
         </motion.div>
       </div>
     </motion.section>
