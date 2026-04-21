@@ -75,8 +75,10 @@ const Contact = () => {
     } catch (error) {
       console.error("Failed to send email.", error);
       setIsSubmitting(false);
-      setErrors(prev => ({ ...prev, submit: "Oops! Failed to send message. Please check your connection or try again later." }));
-      setTimeout(() => setErrors(prev => ({ ...prev, submit: "" })), 6000);
+      // More helpful message for Render free tier sleep
+      const errorMsg = "Server is waking up. Please wait 30 seconds and try again.";
+      setErrors(prev => ({ ...prev, submit: errorMsg }));
+      setTimeout(() => setErrors(prev => ({ ...prev, submit: "" })), 10000);
     }
   };
 
