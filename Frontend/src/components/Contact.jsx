@@ -83,8 +83,12 @@ const Contact = () => {
       clearTimeout(wakingUpTimeout);
       console.error("Failed to send email.", error);
       setIsSubmitting(false);
-      setErrors(prev => ({ ...prev, submit: "Failed to send message. Please try again." }));
-      setTimeout(() => setErrors(prev => ({ ...prev, submit: "" })), 6000);
+      
+      // Show the SPECIFIC error from the backend to debug
+      const serverError = error.response?.data?.message || "Failed to send message. Please try again.";
+      setErrors(prev => ({ ...prev, submit: serverError }));
+      
+      setTimeout(() => setErrors(prev => ({ ...prev, submit: "" })), 10000);
     }
   };
 
