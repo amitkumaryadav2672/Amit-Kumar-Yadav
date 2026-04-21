@@ -16,7 +16,7 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/amit-kumar-yadav-52a56529a/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <Linkedin size={20} />
           </a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yadavamit847412@gmail.com&su=Let's discuss an opportunity&body=Let's discuss an opportunity" target="_blank" rel="noreferrer" aria-label="Email">
+          <a href="mailto:yadavamit847412@gmail.com?subject=Let's discuss an opportunity&body=Let's discuss an opportunity" aria-label="Email">
             <Mail size={20} />
           </a>
         </div>
