@@ -14,7 +14,7 @@ const Skills = () => {
     { category: 'Frameworks', items: ['FastAPI', 'Streamlit', 'React.js', 'Express.js', 'Tailwind CSS'], icon: <Terminal size={20} />, color: 'skill-blue-purple' },
     { category: 'Databases', items: ['MongoDB', 'MySQL', 'FAISS Vector Database', 'Redis'], icon: <Database size={20} />, color: 'skill-orange-rose' },
     { category: 'Data Visualization', items: ['Power BI', 'Tableau', 'Matplotlib'], icon: <BarChart2 size={20} />, color: 'skill-cyan-emerald' },
-    { category: 'Tools', items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Jupyter Notebook'], icon: <Settings size={20} />, color: 'skill-indigo' },
+    { category: 'Tools', items: ['Git', 'GitHub', 'Docker', 'Postman', 'VS Code', 'Jupyter Notebook', 'Vercel', 'Render'], icon: <Settings size={20} />, color: 'skill-indigo' },
     { category: 'Core CS', items: ['DSA (225+ Solved)', 'OOPs', 'DBMS'], icon: <BookOpen size={20} />, color: 'skill-pink-rose' }
   ];
 

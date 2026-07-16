@@ -81,6 +81,48 @@ const Projects = () => {
       live: '#',
       color: '#38bdf8',
       icon: <Terminal size={24} color="#38bdf8" />
+    },
+    {
+      title: 'Health Assistance Application (LLM)',
+      role: 'AI / LLM Developer',
+      duration: 'Python — LangChain — Gemini API — FastAPI',
+      description: [
+        'Built an AI-powered healthcare assistant using Gemini 1.5 Pro, LangChain, and Retrieval-Augmented Generation (RAG) to answer medical queries.',
+        'Implemented semantic search using embeddings, FAISS Vector Database, FastAPI, and Prompt Engineering for accurate context-aware responses.'
+      ],
+      tech: ['Python', 'LangChain', 'Gemini 1.5 Pro', 'FastAPI', 'FAISS', 'RAG'],
+      github: 'https://github.com/amitkumaryadav2672',
+      live: '#',
+      color: '#10b981',
+      icon: <Code size={24} color="#10b981" />
+    },
+    {
+      title: 'Conversational AI Chatbot for Customer Support',
+      role: 'AI Developer',
+      duration: 'Python — GPT-4o — LangChain — FastAPI',
+      description: [
+        'Developed an AI chatbot using GPT-4o, LangChain, FastAPI, and Prompt Engineering for automated customer support.',
+        'Implemented conversation memory, Retrieval-Augmented Generation (RAG), REST APIs, and intelligent context-aware response generation.'
+      ],
+      tech: ['Python', 'GPT-4o', 'LangChain', 'FastAPI', 'RAG'],
+      github: 'https://github.com/amitkumaryadav2672',
+      live: '#',
+      color: '#ec4899',
+      icon: <Layers size={24} color="#ec4899" />
+    },
+    {
+      title: 'DocuWiz AI – Intelligent Document Analyzer',
+      role: 'AI Developer',
+      duration: 'Python — FastAPI — Streamlit — LangChain',
+      description: [
+        'Built an AI-powered document analysis platform supporting PDF/DOCX summarization, semantic search, document retrieval, and intelligent question answering.',
+        'Developed a FastAPI backend with Streamlit frontend using LangChain, RAG, and FAISS Vector Database.'
+      ],
+      tech: ['Python', 'FastAPI', 'Streamlit', 'LangChain', 'RAG', 'FAISS'],
+      github: 'https://github.com/amitkumaryadav2672',
+      live: '#',
+      color: '#eab308',
+      icon: <Terminal size={24} color="#eab308" />
     }
   ];
 
