@@ -9,36 +9,6 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Student Management System',
-      role: 'Full Stack Python Developer',
-      duration: '75 Days',
-      description: [
-        'Developed a full-stack Student Management System using React.js, Flask, and MySQL.',
-        'Implemented authentication, CRUD operations, and attendance management.',
-        'Built REST APIs and optimized MySQL queries for efficient data management.'
-      ],
-      tech: ['React.js', 'Python', 'Flask', 'MySQL', 'SQL'],
-      github: 'https://github.com/amitkumaryadav2672',
-      live: '#',
-      color: '#6366f1',
-      icon: <Database size={24} color="#6366f1" />
-    },
-    {
-      title: 'Employee Payroll Management System',
-      role: 'Full Stack Python Developer',
-      duration: '60 Days',
-      description: [
-        'Built a full-stack Payroll Management System using React.js, Flask, and MySQL.',
-        'Developed employee management, salary calculation, and payroll modules.',
-        'Designed REST APIs and optimized SQL queries for fast payroll processing.'
-      ],
-      tech: ['React.js', 'Python', 'Flask', 'MySQL', 'SQL'],
-      github: 'https://github.com/amitkumaryadav2672',
-      live: '#',
-      color: '#eab308',
-      icon: <Terminal size={24} color="#eab308" />
-    },
-    {
       title: 'Trimly – Salon at Home Platform',
       role: 'Full Stack Developer',
       duration: '90 Days',
@@ -66,6 +36,51 @@ const Projects = () => {
       live: 'https://viva-mate-ai.vercel.app/',
       color: '#6366f1',
       icon: <Layers size={24} color="#6366f1" />
+    },
+    {
+      title: 'Quick AI Platform',
+      role: 'Internship Project – Software Developer Intern',
+      duration: 'Feb 2026 - Present',
+      description: [
+        'Built a comprehensive AI content platform featuring text and image generation.',
+        'Integrated Clerk for secure authentication, Gemini AI for smart text responses, and Clipdrop for advanced image processing.',
+        'Managed media assets using Cloudinary and database operations with MongoDB.'
+      ],
+      tech: ['MERN Stack', 'Clerk Auth', 'Gemini AI', 'Clipdrop', 'Cloudinary', 'Tailwind CSS'],
+      github: 'https://github.com/amitkumaryadav2672/Quick-Ai',
+      live: 'https://quick-ai-swart-phi.vercel.app/',
+      color: '#eab308',
+      icon: <Terminal size={24} color="#eab308" />
+    },
+    {
+      title: 'Student Management System',
+      role: 'Full Stack Python Developer',
+      duration: '75 Days',
+      description: [
+        'Developed a full-stack Student Management System using React.js, Flask, and MySQL.',
+        'Implemented authentication, CRUD operations, and attendance management.',
+        'Built REST APIs and optimized MySQL queries for efficient data management.'
+      ],
+      tech: ['React.js', 'Python', 'Flask', 'MySQL', 'SQL'],
+      github: 'https://github.com/amitkumaryadav2672',
+      live: '#',
+      color: '#c084fc',
+      icon: <Database size={24} color="#c084fc" />
+    },
+    {
+      title: 'Employee Payroll Management System',
+      role: 'Full Stack Python Developer',
+      duration: '60 Days',
+      description: [
+        'Built a full-stack Payroll Management System using React.js, Flask, and MySQL.',
+        'Developed employee management, salary calculation, and payroll modules.',
+        'Designed REST APIs and optimized SQL queries for fast payroll processing.'
+      ],
+      tech: ['React.js', 'Python', 'Flask', 'MySQL', 'SQL'],
+      github: 'https://github.com/amitkumaryadav2672',
+      live: '#',
+      color: '#38bdf8',
+      icon: <Terminal size={24} color="#38bdf8" />
     }
   ];
 
