@@ -13,25 +13,6 @@ const Education = () => {
         'Built responsive UI, integrated REST APIs, and managed authentication/database operations.',
         'Worked on Redis Cache optimization, Git/GitHub collaboration, debugging, and bug fixing.'
       ]
-    },
-    {
-      title: 'Academic Achievements & Certifications',
-      subtitle: 'Coding & Certifications',
-      desc: [
-        'GeeksforGeeks Rank: 24th at CEC, Mohali',
-        'Solved 225+ DSA problems on LeetCode & GFG',
-        'MERN Full Stack Development Certification',
-        'DSA (Java) & SQL Certifications'
-      ]
-    },
-    {
-      title: 'Extra-Curricular Achievements',
-      subtitle: 'Hackathons & Leadership',
-      desc: [
-        'Secured 3rd position in D4 (Google) Hackathon 2023 at CGC Jhanjeri',
-        'Participated in Smart India Hackathon (SIH) 2024 with real-world problem solving',
-        'Coordinated multiple college events, demonstrating teamwork and leadership'
-      ]
     }
   ];
 
@@ -59,7 +40,7 @@ const Education = () => {
           className="timeline-side"
         >
           <div className="section-header align-left">
-            <h2 className="section-title">Experience & <span className="gradient-text">Achievements</span></h2>
+            <h2 className="section-title">Professional <span className="gradient-text">Experience</span></h2>
           </div>
 
           <div className="timeline-wrapper">
