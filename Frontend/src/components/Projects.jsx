@@ -87,8 +87,9 @@ const Projects = () => {
       role: 'AI / LLM Developer',
       duration: 'Python — LangChain — Gemini API — FastAPI',
       description: [
-        'Built an AI-powered healthcare assistant using Gemini 1.5 Pro, LangChain, and Retrieval-Augmented Generation (RAG) to answer medical queries.',
-        'Implemented semantic search using embeddings, FAISS Vector Database, FastAPI, and Prompt Engineering for accurate context-aware responses.'
+        'Developed an AI-powered healthcare assistant using Gemini 1.5 Pro, LangChain, FastAPI, and Retrieval-Augmented Generation (RAG) to answer medical queries.',
+        'Implemented semantic search using embeddings, FAISS Vector Database, and Prompt Engineering to generate accurate, context-aware responses.',
+        'Designed REST APIs, optimized retrieval pipelines, and improved response quality through efficient context retrieval and prompt optimization.'
       ],
       tech: ['Python', 'LangChain', 'Gemini 1.5 Pro', 'FastAPI', 'FAISS', 'RAG'],
       github: 'https://github.com/amitkumaryadav2672',
@@ -123,6 +124,20 @@ const Projects = () => {
       live: '#',
       color: '#eab308',
       icon: <Terminal size={24} color="#eab308" />
+    },
+    {
+      title: 'LC Report & Approval Workflow Dashboard',
+      role: 'Data Analyst / BI Developer',
+      duration: 'Python — Power BI — MySQL',
+      description: [
+        'Developed an interactive business intelligence dashboard using Python, MySQL, and Power BI to analyze approval workflows and operational KPIs.',
+        'Performed data cleaning, preprocessing, exploratory data analysis (EDA), and advanced SQL analysis using joins, aggregations, and window functions to generate actionable business insights.'
+      ],
+      tech: ['Python', 'MySQL', 'Power BI', 'SQL'],
+      github: 'https://github.com/amitkumaryadav2672',
+      live: '#',
+      color: '#8b5cf6',
+      icon: <BarChart2 size={24} color="#8b5cf6" />
     }
   ];
 
