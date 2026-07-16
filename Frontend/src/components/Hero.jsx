@@ -25,7 +25,7 @@ const Hero = () => {
 
   const stats = [
     { label: 'DSA Problems', value: '225+', icon: <Code2 size={20} /> },
-    { label: 'Projects', value: '8', icon: <Award size={20} /> },
+    { label: 'Projects', value: '12+', icon: <Award size={20} /> },
     { label: 'Hackathons', value: '3rd Place', icon: <Briefcase size={20} /> }
   ];
 
