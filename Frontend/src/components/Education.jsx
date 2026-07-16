@@ -3,27 +3,30 @@ import { motion } from 'framer-motion';
 import './Education.css';
 
 const Education = () => {
-  const experience = [
+  const achievements = [
     {
-      role: 'Software Developer Intern',
-      company: 'WebSeeder Technologies Pvt. Ltd.',
-      date: 'Apr 2026 – June 2026',
+      title: 'Academic Achievements & Certifications',
+      subtitle: 'Coding & Certifications',
       desc: [
-        'Developed full-stack web applications using React.js, Node.js, Express.js, MongoDB.',
-        'Built responsive UI, integrated REST APIs, and managed authentication/database operations.',
-        'Worked on Redis Cache optimization, Git/GitHub collaboration, debugging, and bug fixing.'
+        'GeeksforGeeks Rank: 24th at CEC, Mohali',
+        'Solved 225+ DSA problems on LeetCode & GFG',
+        'MERN Full Stack Development Certification',
+        'DSA (Java) & SQL Certifications'
       ]
     },
     {
-      role: 'MERN Stack Development Trainee | Intern',
-      company: 'HopingMinds, Mohali',
-      date: 'Oct 2025 – Feb 2026',
-      desc: 'Developed "Trimly – Salon at Home Platform" as an internship project. Completed 6-month professional training in MERN stack, built real-world projects with REST APIs, and managed full-stack integration.'
+      title: 'Extra-Curricular Achievements',
+      subtitle: 'Hackathons & Leadership',
+      desc: [
+        'Secured 3rd position in D4 (Google) Hackathon 2023 at CGC Jhanjeri',
+        'Participated in Smart India Hackathon (SIH) 2024 with real-world problem solving',
+        'Coordinated multiple college events, demonstrating teamwork and leadership'
+      ]
     }
   ];
 
   const education = [
-    { degree: 'B.Tech, Computer Science Engineering', school: 'Chandigarh Engineering College Landran, Mohali', date: '2022 - 2026', score: 'CGPA: 7.3/10' },
+    { degree: 'B.Tech, Computer Science Engineering', school: 'Chandigarh Engineering College Landran, Mohali', date: '2022 - 2026', score: 'CGPA: 7.5/10' },
     { degree: 'Intermediate (B.S.E.B)', school: 'B.S.E.B', date: '2020 - 2021', score: '80.08%' },
     { degree: 'Matriculation (B.S.E.B)', school: 'B.S.E.B', date: '2018 - 2019', score: '80.02%' }
   ];
@@ -38,7 +41,7 @@ const Education = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="education-container">
-        {/* Left Side: Experience */}
+        {/* Left Side: Achievements */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,11 +49,11 @@ const Education = () => {
           className="timeline-side"
         >
           <div className="section-header align-left">
-            <h2 className="section-title">Work <span className="gradient-text">Experience</span></h2>
+            <h2 className="section-title">Achievements & <span className="gradient-text">Certifications</span></h2>
           </div>
 
           <div className="timeline-wrapper">
-            {experience.map((exp, index) => (
+            {achievements.map((ach, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -30 }}
@@ -64,20 +67,17 @@ const Education = () => {
                   className="timeline-item glass-panel"
                   whileHover={{ scale: 1.0, x: 10 }}
                 >
-                  <h3>{exp.role}</h3>
-                  <p className="school">{exp.company}</p>
-                  {Array.isArray(exp.desc) ? (
+                  <h3>{ach.title}</h3>
+                  <p className="school">{ach.subtitle}</p>
+                  {Array.isArray(ach.desc) ? (
                     <ul className="exp-desc-list">
-                      {exp.desc.map((point, idx) => (
+                      {ach.desc.map((point, idx) => (
                         <li key={idx}>{point}</li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="exp-desc">{exp.desc}</p>
+                    <p className="exp-desc">{ach.desc}</p>
                   )}
-                  <div className="edu-meta">
-                    <span className="date gradient-text">{exp.date}</span>
-                  </div>
                 </motion.div>
               </motion.div>
             ))}

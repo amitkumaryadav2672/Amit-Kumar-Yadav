@@ -25,8 +25,8 @@ const Hero = () => {
 
   const stats = [
     { label: 'DSA Problems', value: '225+', icon: <Code2 size={20} /> },
-    { label: 'Projects', value: '12+', icon: <Award size={20} /> },
-    { label: 'Internship', value: 'Exp.', icon: <Briefcase size={20} /> }
+    { label: 'Projects', value: '2', icon: <Award size={20} /> },
+    { label: 'Hackathons', value: '3rd Place', icon: <Briefcase size={20} /> }
   ];
 
   return (
@@ -62,7 +62,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="hero-badge glass-panel"
         >
-          <span className="pulse-dot"></span> Software Developer Intern | WebSeeder Technologies
+          <span className="pulse-dot"></span> Seeking Software Engineer / Developer Roles
         </motion.div>
 
         <motion.h1
@@ -94,7 +94,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="hero-subtitle"
         >
-          Building scalable web apps with MERN Stack. Motivated Computer Science undergraduate with 225+ solved DSA problems and strong expertise in Java & Web Technologies.
+          Seeking an internship or entry-level Software Engineer role. Computer Science Engineering undergraduate with strong knowledge of Python, Java, SQL, Data Structures & Algorithms, and database management. Experienced in React.js, Node.js, Express.js, and MongoDB.
         </motion.p>
 
         {/* Stats Section */}
