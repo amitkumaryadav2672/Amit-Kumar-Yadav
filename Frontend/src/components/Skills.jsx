@@ -12,7 +12,7 @@ const Skills = () => {
     { category: 'Backend', items: ['Node.js', 'Express.js', 'RESTful APIs', 'JWT Authentication'], icon: <Server size={20} />, color: 'skill-blue-purple' },
     { category: 'AI / Generative AI', items: ['LLMs', 'LangChain', 'RAG', 'Prompt Engineering', 'OpenAI API', 'Gemini API', 'Hugging Face', 'FAISS Vector Database'], icon: <Cpu size={20} />, color: 'skill-pink-rose' },
     { category: 'Frameworks', items: ['FastAPI', 'Streamlit', 'React.js', 'Express.js', 'Tailwind CSS'], icon: <Terminal size={20} />, color: 'skill-blue-purple' },
-    { category: 'Databases', items: ['MongoDB', 'MySQL', 'FAISS Vector Database'], icon: <Database size={20} />, color: 'skill-orange-rose' },
+    { category: 'Databases', items: ['MongoDB', 'MySQL', 'FAISS Vector Database', 'Redis'], icon: <Database size={20} />, color: 'skill-orange-rose' },
     { category: 'Data Visualization', items: ['Power BI', 'Tableau', 'Matplotlib'], icon: <BarChart2 size={20} />, color: 'skill-cyan-emerald' },
     { category: 'Tools', items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Jupyter Notebook'], icon: <Settings size={20} />, color: 'skill-indigo' },
     { category: 'Core CS', items: ['DSA (225+ Solved)', 'OOPs', 'DBMS'], icon: <BookOpen size={20} />, color: 'skill-pink-rose' }

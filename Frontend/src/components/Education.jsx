@@ -5,6 +5,16 @@ import './Education.css';
 const Education = () => {
   const achievements = [
     {
+      title: 'Software Developer Intern',
+      subtitle: 'WebSeeder Technologies Pvt. Ltd.',
+      date: 'Apr 2026 – June 2026',
+      desc: [
+        'Developed full-stack web applications using React.js, Node.js, Express.js, MongoDB.',
+        'Built responsive UI, integrated REST APIs, and managed authentication/database operations.',
+        'Worked on Redis Cache optimization, Git/GitHub collaboration, debugging, and bug fixing.'
+      ]
+    },
+    {
       title: 'Academic Achievements & Certifications',
       subtitle: 'Coding & Certifications',
       desc: [
@@ -49,7 +59,7 @@ const Education = () => {
           className="timeline-side"
         >
           <div className="section-header align-left">
-            <h2 className="section-title">Achievements & <span className="gradient-text">Certifications</span></h2>
+            <h2 className="section-title">Experience & <span className="gradient-text">Achievements</span></h2>
           </div>
 
           <div className="timeline-wrapper">
@@ -77,6 +87,11 @@ const Education = () => {
                     </ul>
                   ) : (
                     <p className="exp-desc">{ach.desc}</p>
+                  )}
+                  {ach.date && (
+                    <div className="edu-meta" style={{ marginTop: '0.5rem' }}>
+                      <span className="date gradient-text">{ach.date}</span>
+                    </div>
                   )}
                 </motion.div>
               </motion.div>

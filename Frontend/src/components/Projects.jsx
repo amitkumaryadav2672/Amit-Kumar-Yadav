@@ -37,6 +37,35 @@ const Projects = () => {
       live: '#',
       color: '#eab308',
       icon: <Terminal size={24} color="#eab308" />
+    },
+    {
+      title: 'Trimly – Salon at Home Platform',
+      role: 'Full Stack Developer',
+      duration: '90 Days',
+      description: [
+        'Built salon booking platform with JWT authentication, REST APIs, and role-based access control.',
+        'Developed booking system, Admin Dashboard, Provider Panel, and payment integration.'
+      ],
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+      github: 'https://github.com/amitkumaryadav2672/Trimly-SALON-AT-HOME',
+      live: 'https://trimly-salon-at-home.vercel.app/',
+      color: '#10b981',
+      icon: <Code size={24} color="#10b981" />
+    },
+    {
+      title: 'VivaMate AI – AI Interview Preparation Platform',
+      role: 'Full Stack Developer',
+      duration: '75 Days',
+      description: [
+        'Built AI interview platform using MERN stack with Gemini API integration.',
+        'Developed resume analysis, question generator, roadmap planner, and skill gap analysis.',
+        'Implemented secure authentication and scalable backend APIs.'
+      ],
+      tech: ['React.js', 'Node.js', 'Express.js', 'Gemini API'],
+      github: 'https://github.com/amitkumaryadav2672/VivaMate-AI',
+      live: 'https://viva-mate-ai.vercel.app/',
+      color: '#6366f1',
+      icon: <Layers size={24} color="#6366f1" />
     }
   ];
 
