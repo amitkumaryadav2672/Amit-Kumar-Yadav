@@ -5,16 +5,6 @@ import './Education.css';
 const Education = () => {
   const achievements = [
     {
-      title: 'AI Developer Intern',
-      subtitle: 'WebSeeder Technologies Pvt. Ltd.',
-      date: 'Apr 2026 – Jun 2026',
-      desc: [
-        'Developed AI-powered applications using Python, FastAPI, LangChain, REST APIs, and LLMs.',
-        'Integrated Gemini/OpenAI APIs and built Retrieval-Augmented Generation (RAG) solutions for intelligent query processing.',
-        'Collaborated on backend API development, AI feature integration, debugging, and code optimization following clean coding practices.'
-      ]
-    },
-    {
       title: 'Software Developer Intern',
       subtitle: 'WebSeeder Technologies Pvt. Ltd.',
       date: 'Apr 2026 – June 2026',
